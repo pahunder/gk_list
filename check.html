@@ -36,15 +36,15 @@ ymaps.ready(function  () {
             var check = "<b style='color: red;'>bad</b>";
  console.log(colls[10]);   
 			// Устанавливаем координаты и содержимое балуна
-			if (!isNaN(point[0]) && point[0].toString().indexOf('.') != -1) {
-                myPlacemark = new ymaps.Placemark([cols[3],point[4]], {
+			//if (!isNaN(point[0]) && point[0].toString().indexOf('.') != -1) {
+                myPlacemark = new ymaps.Placemark([colls[3],colls[4]], {
                     // Свойства 
 					iden: colls[10],	
                     balloonContentHeader: '<div style="color:#ff0303;font-weight:bold">'+colls[3]+'['+colls[14]+']</div>',
                     balloonContentBody: '<div style="font-size:12px;"><strong>Адрес:</strong> '+colls[6]+'<br /><strong>Корпус:</strong> '+colls[7]+'<br />'+colls[2]+'</div>'               
                 }); 
                 var check = "<b>ok</b>";
-            }
+            //}
             
  
              myCollection.add(myPlacemark);
