@@ -37,7 +37,7 @@ ymaps.ready(function  () {
  console.log(colls[10]);   
 			// Устанавливаем координаты и содержимое балуна
 			if (!isNaN(point[0]) && point[0].toString().indexOf('.') != -1) {
-                myPlacemark = new ymaps.Placemark([point[0],point[1]], {
+                myPlacemark = new ymaps.Placemark([cols[3],point[4]], {
                     // Свойства 
 					iden: colls[10],	
                     balloonContentHeader: '<div style="color:#ff0303;font-weight:bold">'+colls[3]+'['+colls[14]+']</div>',
