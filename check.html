@@ -32,16 +32,17 @@ ymaps.ready(function  () {
 			var src_res='';
 			for(var i in rows){  
 			var colls=rows[i].split(";");//или другой символ разделитель
-            //var point=colls[2].split(",");//или другой символ разделитель
+            var points=colls[6].replace(",",".")+","+colls[7].replace(",",".");//или другой символ разделитель
+            var point=points.split(",");//или другой символ разделитель
             var check = "<b style='color: red;'>bad</b>";
  console.log(colls[0]);   
 			// Устанавливаем координаты и содержимое балуна
 			//if (!isNaN(point[0]) && point[0].toString().indexOf('.') != -1) {
-                myPlacemark = new ymaps.Placemark([colls[6],colls[7]], {
+                myPlacemark = new ymaps.Placemark([point[0],point[1]], {
                     // Свойства 
 					iden: colls[0],	
                     balloonContentHeader: '<div style="color:#ff0303;font-weight:bold">'+colls[1]+'['+colls[14]+']</div>',
-                    balloonContentBody: '<div style="font-size:12px;"><strong>Адрес:</strong> '+colls[2]+'<br /><strong>Корд:</strong> '+colls[6]+','+colls[7]+'</div>'               
+                    balloonContentBody: '<div style="font-size:12px;"><strong>Адрес:</strong> '+colls[2]+'<br /><strong>Корд:</strong> '+point[0]+','+point[1]+'</div>'               
                 }); 
                 var check = "<b>ok</b>";
             //}
