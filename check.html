@@ -34,12 +34,12 @@ ymaps.ready(function  () {
 			var colls=rows[i].split(";");//или другой символ разделитель
             var point=colls[2].split(",");//или другой символ разделитель
             var check = "<b style='color: red;'>bad</b>";
- console.log(colls[0]);   
+ console.log(colls[10]);   
 			// Устанавливаем координаты и содержимое балуна
 			if (!isNaN(point[0]) && point[0].toString().indexOf('.') != -1) {
                 myPlacemark = new ymaps.Placemark([point[0],point[1]], {
                     // Свойства 
-					iden: colls[0],	
+					iden: colls[10],	
                     balloonContentHeader: '<div style="color:#ff0303;font-weight:bold">'+colls[3]+'['+colls[14]+']</div>',
                     balloonContentBody: '<div style="font-size:12px;"><strong>Адрес:</strong> '+colls[6]+'<br /><strong>Корпус:</strong> '+colls[7]+'<br />'+colls[2]+'</div>'               
                 }); 
@@ -49,7 +49,7 @@ ymaps.ready(function  () {
  
              myCollection.add(myPlacemark);
  
-			$('#menu').append('<li>'+'<a href="#" onClick="return go_point('+colls[0]+");"+'">['+colls[1]+'] '+colls[2]+'</a> - '+check+'</li>');
+			$('#menu').append('<li>'+'<a href="#" onClick="return go_point('+colls[10]+");"+'">['+colls[10]+'] '+colls[3]+'</a> - '+check+'</li>');
 			}
 			myMap.geoObjects.add(myCollection);
  
